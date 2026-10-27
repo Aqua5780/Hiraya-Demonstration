@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 9ffa12eed9b14debe6163b570b54bde2bb76a469 OpenCode <opencode@localhost> 1792830890 +0800	commit (initial): CP0: Hiraya foundation, schema, auth, RBAC, and dashboards
+9ffa12eed9b14debe6163b570b54bde2bb76a469 8ffe76bf5b7a5b22eabf669b81d74565f481db01 OpenCode <opencode@localhost> 1792830977 +0800	commit: CP0: refine responsive layout, help search, and demo accounts
+8ffe76bf5b7a5b22eabf669b81d74565f481db01 0777a1da5d0f3727159ec9fc56075362fb1320f3 OpenCode <opencode@localhost> 1792832003 +0800	commit: Design: seamless login fade and institutional visual refresh
+0777a1da5d0f3727159ec9fc56075362fb1320f3 5886915b560218d5ed16be2860407b8996cecf09 OpenCode <opencode@localhost> 1792833108 +0800	commit: Refine portal design and add account settings
+5886915b560218d5ed16be2860407b8996cecf09 a826970bbecf3e96b9d2ce2e69a5b8aff0cbdce7 OpenCode <opencode@localhost> 1792835364 +0800	commit: CP1: admin, registrar, and faculty modules
+a826970bbecf3e96b9d2ce2e69a5b8aff0cbdce7 62ae75025774a16227a179bf255e7e58967ffb49 OpenCode <opencode@localhost> 1792835393 +0800	commit: Docs: note portable PHP upload directory
+62ae75025774a16227a179bf255e7e58967ffb49 7cbb0be721e46b838acd7c5b4b6d498c233e0417 OpenCode <opencode@localhost> 1792837920 +0800	commit: CP2: student enrollment, payments, and finance verification
+7cbb0be721e46b838acd7c5b4b6d498c233e0417 84ffc7be9d0760099f146eb1a3ae7aa58279fd51 OpenCode <opencode@localhost> 1792838491 +0800	commit: Security: harden file downloads and show proof file names
+84ffc7be9d0760099f146eb1a3ae7aa58279fd51 a500fd5fa9eeaefef5e5444c37542e8cc08cc9c4 OpenCode <opencode@localhost> 1792839378 +0800	commit: CP3: final QA, production documentation, and branded error pages
+a500fd5fa9eeaefef5e5444c37542e8cc08cc9c4 d57a221263cddd83d97efea62d6f1cb694ca82eb OpenCode <opencode@localhost> 1792840789 +0800	commit: Stage deferred modules and add wiring guide
+d57a221263cddd83d97efea62d6f1cb694ca82eb acc14fd976fd89189aee9796f5b18f4c272e0f66 OpenCode <opencode@localhost> 1792842262 +0800	commit: Security: harden auth, payments, and browser headers
+acc14fd976fd89189aee9796f5b18f4c272e0f66 47811f1b77acd118eeeac298e05a948f04ab193e OpenCode <opencode@localhost> 1792843535 +0800	commit: Security: reduce enumeration, restrict email changes, and harden deployment
+47811f1b77acd118eeeac298e05a948f04ab193e 5deaead2114851ddaa7872ac2618f41d060f33be OpenCode <opencode@localhost> 1792844507 +0800	commit: Add admin student accounts, password resets, and modal confirmations
+5deaead2114851ddaa7872ac2618f41d060f33be 5d6ce89b794046cbbd32133a5213b729f234d5b3 OpenCode <opencode@localhost> 1792844988 +0800	commit: Fix TypeScript 7 path config and Inertia page resolver
+5d6ce89b794046cbbd32133a5213b729f234d5b3 b79715c6ee1188c9e6123c3313b31f8c0ce265bd OpenCode <opencode@localhost> 1792845162 +0800	commit: Ignore AI assistant and agent tooling files
+b79715c6ee1188c9e6123c3313b31f8c0ce265bd 487a9bad2fd9bfd6436272d3a69338afd2c2ef87 OpenCode <opencode@localhost> 1792845291 +0800	commit: Ignore all local env variants except the example

@@ -1,0 +1,263 @@
+@import 'tailwindcss';
+
+@source '../js/**/*.vue';
+@source '../js/**/*.ts';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Segoe UI', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
+        sans-serif;
+    --font-display: Georgia, 'Times New Roman', serif;
+
+    --color-cream-50: #fefdfb;
+    --color-cream-100: #faf7ef;
+    --color-cream-200: #f3eddc;
+    --color-cream-300: #e9dfc6;
+
+    --color-navy-50: #f3f6fc;
+    --color-navy-100: #e6edf8;
+    --color-navy-200: #c7d6ee;
+    --color-navy-300: #9bb4df;
+    --color-navy-400: #668bcb;
+    --color-navy-500: #426bb4;
+    --color-navy-600: #2f5298;
+    --color-navy-700: #27417b;
+    --color-navy-800: #1c305c;
+    --color-navy-900: #12264c;
+    --color-navy-950: #0b1832;
+
+    --color-gold-50: #faf6e9;
+    --color-gold-100: #f3e8c8;
+    --color-gold-200: #e6d29b;
+    --color-gold-300: #d6b866;
+    --color-gold-400: #c19a2b;
+    --color-gold-500: #a8841f;
+    --color-gold-600: #8a6b18;
+    --color-gold-700: #6b5212;
+    --color-gold-800: #4d3a0d;
+    --color-gold-900: #302408;
+
+    --color-laurel-50: #f2f8f0;
+    --color-laurel-100: #e0efdc;
+    --color-laurel-200: #c2dfba;
+    --color-laurel-300: #96c78a;
+    --color-laurel-400: #66a957;
+    --color-laurel-500: #3f6f3a;
+    --color-laurel-600: #32652f;
+    --color-laurel-700: #285026;
+    --color-laurel-800: #1f3f1e;
+    --color-laurel-900: #173017;
+
+    --shadow-soft: 0 1px 2px rgb(18 38 76 / 0.04);
+    --shadow-lift: 0 22px 55px -32px rgb(18 38 76 / 0.35);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply min-h-full bg-cream-100 text-navy-900;
+    }
+
+    ::selection {
+        @apply bg-gold-200 text-navy-950;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-gold-400 ring-offset-2 ring-offset-cream-100;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply tracking-tight;
+    }
+}
+
+@layer components {
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .eyebrow {
+        @apply text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-navy-500;
+    }
+
+    .page-title {
+        @apply font-display text-2xl font-bold text-navy-900 sm:text-3xl;
+    }
+
+    .page-subtitle {
+        @apply mt-1 max-w-3xl text-sm leading-6 text-navy-500;
+    }
+
+    .card {
+        @apply min-w-0 rounded-lg border border-navy-100 bg-white shadow-soft;
+    }
+
+    .card-header {
+        @apply flex flex-wrap items-center justify-between gap-3 border-b border-navy-100 px-5 py-4;
+    }
+
+    .card-title {
+        @apply text-sm font-bold text-navy-900;
+    }
+
+    .card-body {
+        @apply p-5;
+    }
+
+    .btn {
+        @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-55;
+    }
+
+    .btn-primary {
+        @apply bg-navy-900 text-white hover:bg-navy-800;
+    }
+
+    .btn-gold {
+        @apply bg-gold-400 text-navy-950 hover:bg-gold-300;
+    }
+
+    .btn-secondary {
+        @apply border border-navy-200 bg-white text-navy-800 hover:border-navy-300 hover:bg-navy-50;
+    }
+
+    .btn-ghost {
+        @apply text-navy-700 hover:bg-navy-50;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .btn-sm {
+        @apply rounded px-3 py-2 text-xs;
+    }
+
+    .label {
+        @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy-600;
+    }
+
+    .input {
+        @apply w-full rounded-md border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-300 focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-200 disabled:bg-navy-50 disabled:text-navy-400;
+    }
+
+    .input-sm {
+        @apply rounded px-3 py-2 text-xs;
+    }
+
+    .hint {
+        @apply mt-1 text-xs leading-5 text-navy-400;
+    }
+
+    .error-text {
+        @apply mt-1 text-xs font-medium text-red-600;
+    }
+
+    .badge {
+        @apply inline-flex items-center gap-1 rounded px-2 py-0.5 text-[0.65rem] font-semibold;
+    }
+
+    .badge-navy {
+        @apply bg-navy-100 text-navy-700;
+    }
+
+    .badge-gold {
+        @apply bg-gold-100 text-gold-800;
+    }
+
+    .badge-green {
+        @apply bg-laurel-100 text-laurel-700;
+    }
+
+    .badge-red {
+        @apply bg-red-50 text-red-700;
+    }
+
+    .badge-gray {
+        @apply bg-navy-50 text-navy-500;
+    }
+
+    .table-shell {
+        @apply w-full max-w-full overflow-x-auto;
+    }
+
+    .data-table {
+        @apply w-full min-w-[36rem] border-collapse text-left text-sm;
+    }
+
+    .data-table thead th {
+        @apply border-b border-navy-100 bg-navy-50/70 px-4 py-3 text-[0.68rem] font-bold uppercase tracking-wider text-navy-500;
+    }
+
+    .data-table tbody td {
+        @apply border-b border-navy-50 px-4 py-3.5 align-middle text-navy-700;
+    }
+
+    .data-table tbody tr:last-child td {
+        @apply border-b-0;
+    }
+
+    .data-table tbody tr {
+        @apply transition-colors hover:bg-cream-50;
+    }
+
+    .link {
+        @apply font-semibold text-navy-700 underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-navy-900;
+    }
+
+    .nav-link {
+        @apply flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-navy-200 transition-colors hover:bg-white/10 hover:text-white;
+    }
+
+    .nav-link-active {
+        @apply bg-white/10 text-white;
+    }
+
+    .nav-link-disabled {
+        @apply cursor-not-allowed opacity-45 hover:bg-transparent hover:text-navy-200;
+    }
+
+    .stat-card {
+        @apply rounded-lg border border-navy-100 bg-white p-5 shadow-soft flex items-start justify-between gap-4;
+    }
+
+    .stat-icon {
+        @apply flex size-8 shrink-0 items-center justify-end text-navy-300;
+    }
+
+    .empty-state {
+        @apply flex flex-col items-center justify-center gap-3 px-6 py-14 text-center;
+    }
+
+    .skeleton {
+        @apply animate-pulse rounded-lg bg-navy-100;
+    }
+
+    .divider {
+        @apply h-px w-full bg-navy-100;
+    }
+
+    .seal-ring {
+        @apply rounded-full bg-white p-1 ring-4 ring-gold-400/35;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border-color: #d5dbe6 !important;
+    }
+}
